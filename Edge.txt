@@ -1,1 +1,8 @@
-CheckNetIsolation LoopbackExempt -a -n=Microsoft.MicrosoftEdge_8wekyb3d8bbwe
+Special configuration may be necessary for Edge browser with Windows 10 OS.
+MS Windows 10 uses an isolation technology ("AppContainer") that may prevent requests being sent from Edge to your application.
+Instructions for enabling loopback can be found on this Microsoft troubleshooting page:https://msdn.microsoft.com/en-us/library/windows/apps/Hh780593.aspx
+To enable loopback for Edge, use this command:
+CheckNetIsolation LoopbackExempt -a -n="Microsoft.MicrosoftEdge_8wekyb3d8bbwe"
+
+To disable loopback for Edge use this command:
+CheckNetIsolation.exe LoopbackExempt –d –n="Microsoft.MicrosoftEdge_8wekyb3d8bbwe"
